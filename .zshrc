@@ -40,6 +40,8 @@ function docker_spacemacs() {
   sudo docker run -it --rm -v "$PWD":/root/code spacemacs $1
 }
 
-alias spacemacs='sudo docker run -it --rm -v "$PWD":/root/code spacemacs $1'
-alias nodejs='sudo docker run -it --rm -v "$PWD":/root/code node:12.7.0-alpine $1'
+export EDITOR=vim
+
+alias spacemacs='docker run -it --rm -v "$PWD":/root/code spacemacs $1'
+alias nodejs='docker run -it --rm -v "$PWD":/root/code node:12.7.0-alpine $1'
 
