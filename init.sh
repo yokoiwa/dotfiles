@@ -25,6 +25,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 
+docker build -t node ./docker/node
 docker build -t spacemacs ./docker/spacemacs
 
 cp -rf \
